@@ -1,0 +1,201 @@
+site_name: M133 - PHP
+
+theme:
+    name: material
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+              icon: material/weather-sunny
+              name: Schone deine Augen! Schalte auf dunkel
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+              icon: material/weather-night
+              name: Zu dunkel? Schalte auf hell!
+    language: de
+    logo: favicon.svg
+    favicon: favicon.svg
+    font:
+        text: Roboto
+    icon:
+        repo: fontawesome/brands/github-alt
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.top
+        - navigation.indexes
+        - search.share
+        - content.code.annotate
+        - content.tabs.link
+        - navigation.sections
+
+extra_css:
+    - css/custom.css
+
+copyright: Copyright &copy; 2022 Manuel Schumacher
+
+repo_url: https://github.com/bztfinformatik/lernportfolio-21r8390-php
+repo_name: 21r8390/Sourcecode
+edit_uri: https://github.com/bztfinformatik/lernportfolio-21r8390-php/tree/main/docs
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/bztfinformatik/lernportfolio-21r8390-php
+          name: 21r8390 on GitHub
+
+markdown_extensions:
+    # Python Markdown
+    - abbr
+    - admonition
+    - attr_list
+    - def_list
+    - footnotes
+    - md_in_html
+    - toc:
+          permalink: "#"
+    - pymdownx.emoji:
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+          emoji_index: !!python/name:materialx.emoji.twemoji
+
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.snippets:
+          base_path: docs
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+    - search:
+          lang:
+              - de
+    - tags:
+          tags_file: "Tags.md"
+    - redirects:
+          redirect_maps:
+              "PHP.md": "PHP/Start.md"
+              "PHP/UEbersicht.md": "PHP/Start.md"
+              "Docker.md": "Docker/Start.md"
+              "Appendix/PHP-Cheatsheet.md": "PHP/Appendix/Cheatsheet.md"
+              "Appendix/Changelog.md": "Changelog.md"
+              "Appendix/Tags.md": "Tags.md"
+              "Inhalt.md": "Tags.md"
+              "Journal.md": "Reflexion/001_Woche.md"
+              "LB1.md": "LB1/Uebersicht.md"
+              "PHP/Twig/Uebersicht.md": "LB1/Beschreibung/Twig.md"
+              "LB1/Beschreibung/SSR.md": "LB1/Beschreibung/Rendering.md"
+              "LB1/Beschreibung/CSR.md": "LB1/Beschreibung/Rendering.md"
+    - minify:
+          minify_html: true
+
+nav:
+    - Startseite:
+          - Startseite: "index.md"
+          - Changelog: "Changelog.md"
+          - Tags: "Tags.md"
+    - Reflexion:
+          - "1. Woche": "Reflexion/001_Woche.md"
+          - "2. Woche": "Reflexion/002_Woche.md"
+          - "3. Woche": "Reflexion/003_Woche.md"
+          - "4. Woche": "Reflexion/004_Woche.md"
+          - "5. Woche": "Reflexion/005_Woche.md"
+          - "6. Woche": "Reflexion/006_Woche.md"
+          - "7. Woche": "Reflexion/007_Woche.md"
+          - "8. Woche": "Reflexion/008_Woche.md"
+          - "9. Woche": "Reflexion/009_Woche.md"
+          - "10. Woche": "Reflexion/010_Woche.md"
+          - "11. Woche": "Reflexion/011_Woche.md"
+          - "12. Woche": "Reflexion/012_Woche.md"
+          - "13. Woche": "Reflexion/013_Woche.md"
+          - "14. Woche": "Reflexion/014_Woche.md"
+          - "15. Woche": "Reflexion/015_Woche.md"
+          - "16. Woche": "Reflexion/016_Woche.md"
+          - "17. Woche": "Reflexion/017_Woche.md"
+    - PHP:
+          - Übersicht: "PHP/Start.md"
+          - Installation: "PHP/Installation.md"
+          - Basics: "PHP/Basics.md"
+          - OOP: "PHP/OOP.md"
+          - Aufgaben:
+                - "Rechnen mit Variablen": "PHP/Aufgaben/Rechnen.md"
+                - Vergleiche: "PHP/Aufgaben/Vergleiche.md"
+                - Schleifen: "PHP/Aufgaben/Schleifen.md"
+                - Arrays: "PHP/Aufgaben/Arrays.md"
+                - "HTTP-Parameter": "PHP/Aufgaben/HTTP-Parameter.md"
+                - Formular: "PHP/Aufgaben/Formular.md"
+                - Dateien: "PHP/Aufgaben/Dateien.md"
+          - Framework:
+                - Aufbau: "PHP/Framework/Aufbau.md"
+                - Hinzufügen: "PHP/Framework/Hinzufügen.md"
+                - Validation: "PHP/Framework/Validation.md"
+          - Tiwg:
+                - Übersicht: "LB1/Beschreibung/Twig.md"
+                - Installation: "PHP/Twig/Installation.md"
+                - Design: "PHP/Twig/Design.md"
+                - Logik: "PHP/Twig/Logik.md"
+          - "Sessions & Cookies":
+                - Sessions: "PHP/SessionCookie/Sessions.md"
+                - Cookies: "PHP/SessionCookie/Cookies.md"
+                - Anwendung: "PHP/SessionCookie/Anwendung.md"
+    - Docker:
+          - Übersicht: "Docker/Start.md"
+          - Aufgaben: "Docker/Aufgaben.md"
+    - Datenbank:
+          - Übersicht: "Datenbank/Start.md"
+          - "Init-Scripts": "Datenbank/Initscripts.md"
+          - Adminer: "Datenbank/Adminer.md"
+          - "Prepared-Statements": "Datenbank/PreparedStatements.md"
+    - LB1:
+          - Übersicht: "LB1/Uebersicht.md"
+          - Beschreibung:
+                - "MVC": "LB1/Beschreibung/MVC.md"
+                - "Twig": "LB1/Beschreibung/Twig.md"
+                - "Rendering": "LB1/Beschreibung/Rendering.md"
+          - Architekturkonzept:
+                - Mockup: "LB1/Architekturkonzept/Mockup.md"
+                - MVC-Konzept: "LB1/Architekturkonzept/MVC-Konzept.md"
+                - Twig-Konzept: "LB1/Architekturkonzept/Twig-Konzept.md"
+          - Anforderung:
+                - "Use Cases": "LB1/Anforderung/UseCases.md"
+                - Akteure: "LB1/Anforderung/Akteure.md"
+                - Funktionale: "LB1/Anforderung/Funktionale.md"
+                - Testszenario: "LB1/Anforderung/Testszenario.md"
+                - Daten: "LB1/Anforderung/Daten.md"
+          - Testprotokoll: "LB1/Testprotokoll.md"
+    - LB2:
+          - "1. Concept Map": "LB2/01_ConceptMap.md"
+          - "2. Concept Map": "LB2/02_ConceptMap.md"
+          - "3. Concept Map": "LB2/03_ConceptMap.md"
+          - "4. Concept Map": "LB2/04_ConceptMap.md"
+    - Appendix:
+          - "Journal Anforderungen": "Reflexion/000_Vorlage.md"
+          - "GitHub Pages": "Appendix/GitHubPages/Einrichten.md"
+          - Sicherheit: "Appendix/Sicherheit.md"
+          - Struktur: "Appendix/Struktur/Struktur.md"
+          - PHP:
+                - "PHP-Cheatsheet": "PHP/Appendix/Cheatsheet.md"
+                - "Do's and Don'ts": "PHP/Appendix/DosAndDonts.md"
+                - Datentypen: "PHP/Appendix/Datentypen.md"
+                - "Array Funktionen": "PHP/Appendix/ArrayFunktionen.md"
+                - Sortieren: "PHP/Appendix/Sortieren.md"
+                - Regex: "PHP/Appendix/Regex.md"
