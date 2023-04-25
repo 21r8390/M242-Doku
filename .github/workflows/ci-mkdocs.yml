@@ -1,25 +1,33 @@
 name: ci-mkdocs
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
+permissions:
+    contents: write
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@v4
+              with:
+                  python-version: 3.x
 
-      - name: Move Config 📝
-        run: mv ./docs/mkdocs.yml .
+            - name: Cache dependencies 📚
+              uses: actions/cache@v2
+              with:
+                  key: ${{ github.ref }}
+                  path: .cache
 
-      - name: Install dependencies 📦
-        run: pip install \
-          mkdocs-material \
-          mkdocs-minify-plugin \
-          mkdocs-redirects
+            - name: Move Config 📝
+              run: mv ./docs/mkdocs.yml .
 
-      - name: Deploy documentation 🌟
-        run: mkdocs gh-deploy --force
+            - name: Install dependencies 📦
+              run: pip install \
+                  mkdocs-material \
+                  mkdocs-minify-plugin \
+                  mkdocs-redirects
+
+            - name: Deploy documentation 🚀
+              run: mkdocs gh-deploy --force
