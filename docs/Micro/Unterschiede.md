@@ -27,4 +27,12 @@ tags:
 
 Ein Mikroprozessor kann allgemeine Operationen für mehrere verschiedene Aufgaben ausführen. Im Gegenteil, ein Mikrocontroller kann benutzerdefinierte Aufgaben ausführen, bei denen er für den gesamten Lebenszyklus dieselbe Aufgabe ausführt.
 
+### Mikroprozessor
+
+Der Mikroprozessor ist ein Prozessor, der vollständig in einem einzigen Schaltkreis untergebraucht ist. Der Prozessor in einem Personal Computer ist in der Regel ein solcher Mikroprozessor.
+
+### Mikrocontroller
+
+Ein Mikrocontroller ist ein Prozessor, der über zusätzliche analoge und digitale Ein- und Ausgänge verfügt und für Steuerungsaufgaben vorgesehen ist. Er wird bereits als vollständiger Computer angesehen, der im Embedded-Bereich eingeordnet wird.
+
 _[Quelle](https://gadget-info.com/difference-between-microprocessor)_

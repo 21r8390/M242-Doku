@@ -136,3 +136,10 @@ nav:
           - Cache: Aufbau/Cache.md
     - Komponenten:
           - Speicherbegriffe: Komponenten/Speicherbegriffe.md
+    - Programmierung:
+          - RTOS: Programmierung/RTOS.md
+          - Multitasking: Programmierung/Multitasking.md
+          - Befehlsausführung: Programmierung/Befehlsausführung.md
+          - Semaphoren: Programmierung/Semaphoren.md
+          - Interrupt: Programmierung/Interrupt.md
+          - Timer: Programmierung/Timer.md
